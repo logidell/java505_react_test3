@@ -27,7 +27,7 @@ function NameForm(props) {
     return (
             <form onSubmit={handleSubmit} className={"container"}>
                 <div className={"my-3"}>
-                    <label for="user-name" className={"form-label"}> 이름: </label>
+                    <label htmlFor="user-name" className={"form-label"}> 이름: </label>
                     {/*input tag의 value를 state로 설정된 변수를 사용해 화면에 데이터 출력
                     사용자 입력에 의해 값이 변경될 경우 이벤트를 발생시킨다. */}
                     <input type={"text"} className={"form-control"} value={value} onChange={handleChange}/>
