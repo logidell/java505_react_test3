@@ -14,7 +14,7 @@ function LayoutAnother(props) {
                 <nav style={styles.navBG} className="navbar navbar-expand-sm opacity-75 fw-semibold">
                     <div className="container-fluid">
                         <ul className="navbar-nav">
-                            <li className="nav-item"><Link className="nav-link active" to={"/"}>Home</Link></li>
+                            <li className="nav-item"><Link className="nav-link" to={"/"}>Home</Link></li>
                             <li className="nav-item"><Link className="nav-link" to={"/about"}>About</Link></li>
                             <li className="nav-item"><Link className="nav-link" to={"/board"}>Board</Link></li>
                         </ul>

@@ -13,6 +13,23 @@ import About from "./pages/About";
 import LayoutAnother from "./pages/LayoutAnother";
 import Header from "./pages/Header";
 import FooterA from "./pages/FooterA";
+import BoardPageMove from "./pages/BoardPageMove";
+import BoardPageView from "./pages/BoardPageView";
+
+
+const styles = {
+    wrapper: {
+        height:"auto",
+        minHeight:"100%",
+        paddingBottom:"50px",
+
+    },
+    footer : {
+        height:"50px",
+        position:"relative",
+        transform:"translateY(-100%)"
+    }
+}
 
 
 function App7(props) {
@@ -61,23 +78,26 @@ function App7(props) {
                     <Header/>
                 </div>
 
-                <nav>
-                    <BrowserRouter>
-                        <Routes>
-                            <Route path={"/"} element={<LayoutAnother/>}>
-                                <Route index element={<HomeAnother/>}/>
-                                <Route path={"about"} element={<About/>}/>
-                                <Route path={"board"} element={<Board/>}/>
-                                <Route path={"*"} element={<NoPage/>}/>
-                            </Route>
-                        </Routes>
-                    </BrowserRouter>
-                </nav>
-
+                <div style={styles.wrapper}>
+                    <nav>
+                        <BrowserRouter>
+                            <Routes>
+                                <Route path={"/"} element={<LayoutAnother/>}>
+                                    <Route index element={<HomeAnother/>}/>
+                                    <Route path={"about"} element={<About/>}/>
+                                    <Route path={"board"} element={<Board/>}/>
+                                    <Route path={"BoardPageMove"} element={<BoardPageMove/>}/>
+                                    <Route path={"BoardPageView"} element={<BoardPageView/>}/>
+                                    <Route path={"*"} element={<NoPage/>}/>
+                                </Route>
+                            </Routes>
+                        </BrowserRouter>
+                    </nav>
+                </div>
                 {/*content*/}
 
                 {/*  footer  */}
-                <FooterA/>
+                <FooterA className={"sticky-bottom"} style={styles.footer}/>
             </div>
     )
 }
