@@ -11,6 +11,8 @@ function Layout(props){
                         <li> <Link to={"/"}>Home</Link></li>
                         <li> <Link to={"/blogs"}>Blogs</Link></li>
                         <li> <Link to={"/contact"}>Contact</Link></li>
+                        <li> <Link to={"/board1"}>Board</Link></li>
+                        <li> <Link to={"/board2"}>Board2</Link></li>
                     </ul>
                 </nav>
 
